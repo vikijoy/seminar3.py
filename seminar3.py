@@ -98,7 +98,6 @@ words = {}
 for word in modified_text:
     words[word] = words.get(word, 0) + 1
 sorted_words = {key: value for key, value in sorted(words.items(), key=lambda item: item[1], reverse=True)}
-# для читаемости кода решил к отдельным переменным присвоить модифицированные коллекции
 print(*list(itertools.islice(sorted_words.keys(), 10)))
 
 # Создайте словарь со списком вещей для похода в качестве ключа и их массой в качестве значения.
